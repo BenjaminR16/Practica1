@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".ConversorTmp">
+
+    <Button
+        android:id="@+id/backMenu"
+        style="@style/styleButtons4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="307dp"
+        android:layout_marginBottom="91dp"
+        android:text="Menu"
+        app:layout_constraintBottom_toTopOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="174dp"
+        android:text="Conversor de temperatura"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/num1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/celci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginEnd="44dp"
+        android:text="@string/celsius"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/num1"
+        app:layout_constraintEnd_toStartOf="@+id/fahrenheit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="1dp"
+        android:text="Fahrenheit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/num2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/celci" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:alpha="0.5"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/num2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:alpha="0.5"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/num1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/resultadoTV"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="50dp"
+        android:alpha="0.5"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/boton"
+        app:layout_constraintEnd_toStartOf="@+id/resultadoTV2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resultadoTV2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="50dp"
+        android:alpha="0.5"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resultadoTV"
+        app:layout_constraintTop_toBottomOf="@+id/num2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/num1"
+        android:textColor="@color/white"
+        android:text="Convertir"
+        style="@style/buttonStyle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
