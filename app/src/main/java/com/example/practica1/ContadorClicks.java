@@ -32,7 +32,7 @@ public class ContadorClicks extends AppCompatActivity {
 
         botonContador.setOnClickListener(v -> {
             numClicks++;
-            contadorView.setText(String.valueOf(numClicks));
+            contadorView.setText(String.valueOf(numClicks)); //enseñar el numero de clicks
         });
 
         vueltaMenu.setOnClickListener(new View.OnClickListener() {
